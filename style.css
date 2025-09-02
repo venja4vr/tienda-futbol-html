@@ -63,4 +63,21 @@ body {
     object-fit: cover;  /* recortamos la imagen */
 }
 
-.object-fit-cover { object-fit: cover; }
+/*footer*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.contenido {
+  min-height: calc(100% - 60px); /* 60px = alto del footer */
+}
+
+footer {
+  height: 60px;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
