@@ -64,23 +64,23 @@ body {
 }
 
 /*footer*/
-html, body {
-  height: 100%;
-  margin: 0;
-}
 
-.contenido {
-  min-height: calc(100% - 60px); /* 60px = alto del footer */
-}
 
 footer {
-  height: 60px;
-  background: #222;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #1B1B90; /* fondo claro */
+  color: #ffffff;
+  width: 100%;
 }
+
+.footer h6 {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  background-color: #000001; /* banda inferior */
+  color: #fff;
+}
+
 
 /*LOGIN*/
 .title,
@@ -169,3 +169,16 @@ de ancho, sumamos responsividad*/
   .spacer, .panel .btn,
   #correo, #pass { grid-column: 1 / -1; }
 }
+
+/* Evita scroll horizontal por pequeños desbordes */
+html, body { overflow-x: hidden; }
+
+/* Asegura que ninguna imagen se pase del ancho */
+img { max-width: 100%; height: auto; }
+
+/* En filas Bootstrap, no usar negativas fuera de contenedor */
+.footer .row { margin-left: 0; margin-right: 0; }
+
+
+
+/*error*/
