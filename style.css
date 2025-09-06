@@ -63,8 +63,18 @@ body {
     object-fit: cover;  /* recortamos la imagen */
 }
 
-/*footer*/
+/*texto del carrusel*/
+#visor_imagenes{
+  color: #ffffff;
+  background-color: #1B1B90;
+  display: inline-block; /*cobre solo el tamaño del texto
+  no el bloque entero*/
+  border-radius: 50px 50px;
+  padding: 10px; /*para el temaño del rectangulo*/
+}
 
+
+/*footer*/
 
 footer {
   background-color: #1B1B90; /* fondo claro */
@@ -178,7 +188,6 @@ img { max-width: 100%; height: auto; }
 
 /* En filas Bootstrap, no usar negativas fuera de contenedor */
 .footer .row { margin-left: 0; margin-right: 0; }
-
 
 
 /*error*/
