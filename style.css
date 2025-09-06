@@ -197,3 +197,11 @@ mejor lectura*/
 @media (min-width: 992px) {
   .about-content .col-lg-9 { max-width: 860px; }
 }
+
+/*ERRORES I. SESION*/
+.text-danger {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.text-danger { font-size: .9rem; }
