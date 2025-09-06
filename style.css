@@ -190,4 +190,10 @@ img { max-width: 100%; height: auto; }
 .footer .row { margin-left: 0; margin-right: 0; }
 
 
-/*error*/
+/*QUIENES SOMOS*/
+
+/* En pantallas grandes, queremos limitar el ancho para una 
+mejor lectura*/
+@media (min-width: 992px) {
+  .about-content .col-lg-9 { max-width: 860px; }
+}
