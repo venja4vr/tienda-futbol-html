@@ -18,7 +18,7 @@ body {
     transition: color 0.5s;
 }
 
-/* hover de los links */
+/* blanco al pasar el cursor */
 .navbar-brandr .nav-link:hover {
     color: #ffffff !important;
 }
@@ -80,4 +80,92 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*LOGIN*/
+.title,
+.auth-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin: 16px 0 12px 0;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*creamos el .panel, el cual le añadimos todos los cambios para
+que finalmente se los agreguemos a nombre, apellido...*/
+.panel,
+.auth-panel {
+  background: #e6e6e6;
+  border-radius: 16px;
+  padding: 28px 28px 20px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  max-width: 620px;
+  margin: 0 auto 24px;      /* centra como en el boceto */
+}
+
+.form,
+.auth-form {
+  display: grid; /*diseño de cuadricula*/
+  grid-template-columns: 1fr; /*una sola cuadricula*/
+  gap: 10px;
+}
+
+.group,
+.auth-group {
+  display: grid;
+  gap: 6px;
+}
+
+.group label,
+.auth-group label {
+  font-size: 1rem;
+  color: #1f1f1f;
+}
+
+.group input[type="text"],
+.group input[type="email"],
+.group input[type="password"],
+.group input[type="date"],
+.auth-group input[type="text"],
+.auth-group input[type="email"],
+.auth-group input[type="password"],
+.auth-group input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.spacer,
+.auth-spacer { height: 18px; }
+/*todo relacionado al boton "continuar" */
+.panel .btn,
+.auth-btn {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #1B1B90;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter .15s ease;
+}
+.panel .btn:hover,
+.auth-btn:hover { filter: brightness(0.95); }
+
+/* media query, para aplicar distintos estilos desde un minimo de 560 pixeles
+de ancho, sumamos responsividad*/
+@media (min-width: 560px) {
+  .form,
+  .auth-form { grid-template-columns: 1fr 1fr; column-gap: 16px; }
+  /*grid-template-columns lo usamos para tener dos columnas*/
+  .spacer, .panel .btn,
+  #correo, #pass { grid-column: 1 / -1; }
 }
