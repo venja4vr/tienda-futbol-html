@@ -198,10 +198,16 @@ mejor lectura*/
   .about-content .col-lg-9 { max-width: 860px; }
 }
 
-/*ERRORES I. SESION*/
-.text-danger {
-  color: red;
-  font-size: 0.85rem;
-}
+/*ajustes para el logo en el navbar*/
+/* style.css */
 
-.text-danger { font-size: .9rem; }
+/* Estilos para el logo en el navbar */
+.logo-navbar {
+    height: 65px; /* Aumenta el tamaño para que se vea mejor */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 15px; /* Agrega un pequeño espacio a la derecha del logo */
+    /* Para mejorar la calidad de renderizado en algunos navegadores */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
