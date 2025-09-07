@@ -20,5 +20,17 @@
     "tallas": ["S", "M", "L"],
     "descripcion": "Dry-fit pro",
     "descuento": 0.5
+    },
+        {
+    "id": "colombia-local-2024",
+    "nombre": "Camiseta Colombia 2024 Local",
+    "precio": 42000,
+    "img": "assets/img/colombia-local-2024-1.jpg",
+    "equipo": "Colombia",
+    "continente": "América",
+    "tallas": ["M", "L"],
+    "descripcion": "la usa colombia",
+    "descuento": 0.1
     }
+    
 ]

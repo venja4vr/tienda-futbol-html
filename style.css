@@ -180,34 +180,41 @@ de ancho, sumamos responsividad*/
   #correo, #pass { grid-column: 1 / -1; }
 }
 
-/* Evita scroll horizontal por pequeños desbordes */
+/* evita scroll horizontal por pequeños desbordes */
 html, body { overflow-x: hidden; }
 
-/* Asegura que ninguna imagen se pase del ancho */
+/* ssegura que ninguna imagen se pase del ancho */
 img { max-width: 100%; height: auto; }
 
-/* En filas Bootstrap, no usar negativas fuera de contenedor */
+/* en filas botstrap no hay que usar negativas fuera de contenedor */
 .footer .row { margin-left: 0; margin-right: 0; }
 
 
 /*QUIENES SOMOS*/
 
-/* En pantallas grandes, queremos limitar el ancho para una 
+/* en pantallas grandes, queremos limitar el ancho para una 
 mejor lectura*/
 @media (min-width: 992px) {
   .about-content .col-lg-9 { max-width: 860px; }
 }
 
 /*ajustes para el logo en el navbar*/
-/* style.css */
-
-/* Estilos para el logo en el navbar */
 .logo-navbar {
     height: 65px; /* Aumenta el tamaño para que se vea mejor */
     width: auto; /* Mantiene la proporción de la imagen */
     margin-right: 15px; /* Agrega un pequeño espacio a la derecha del logo */
-    /* Para mejorar la calidad de renderizado en algunos navegadores */
+    /* para mejorar la calidad de renderizado en algunos navegadores */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
+}
+
+/*error para el login*/
+.logo-contacto {
+    height: 80px; /*tamaño */
+    width: auto; /* mantiene la proporción de la imagen */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    
 }
