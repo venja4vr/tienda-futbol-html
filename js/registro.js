@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       input.classList.remove('is-valid', 'is-invalid');
     });
 
-        // validaciones
-        let formularioValido = true;
 
     // validaciones simples
     if (nombre.value.trim().length >= 3) {
@@ -61,10 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
       pass.classList.add('is-invalid');
     }
 
-            if (formularioValido) {
-            alert('¡Registro realizado con exito.');
-            form.reset(); // Limpia los campos
-        }
   });
 
 });

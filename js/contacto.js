@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
             input.classList.remove('is-valid', 'is-invalid');
         });
 
-        // validaciones
-        let formularioValido = true;
 
         // validación del nombre: mínimo 3 caracteres
         if (nombre.value.trim().length >= 3) {
@@ -45,10 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             formularioValido = false;
         }
 
-        // si el formulario es válido, muestra el mensaje de éxito
-        if (formularioValido) {
-            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
-            form.reset(); // Limpia los campos
-        }
+
     });
 });

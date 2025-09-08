@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
       input.classList.remove('is-valid', 'is-invalid');
     });
 
-        // validaciones
-        let formularioValido = true;
 
     // validaciones simples
     // Email
@@ -37,10 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       pass.classList.add('is-invalid');
     }
 
-        if (formularioValido) {
-            alert('¡Inicio de sesion realizado con exito.');
-            form.reset(); // Limpia los campos
-        }
+
   });
 
 });
