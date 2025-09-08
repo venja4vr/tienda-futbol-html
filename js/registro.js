@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('formLogin');
+  const form = document.getElementById('formRegistro');
    
 
   //limpia los campos al refrescar
@@ -9,15 +9,31 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // evitar que se envíe
 
     // lista de inputs
+    const nombre = document.getElementById('nombre');
+    const apellidos = document.getElementById('apellidos');
+    const rut = document.getElementById('rut');
     const correo = document.getElementById('correo');
     const pass = document.getElementById('pass');
 
     // limpiar estados anteriores
-    [correo, pass].forEach(input => {
+    [nombre, apellidos, rut, correo, pass].forEach(input => {
       input.classList.remove('is-valid', 'is-invalid');
     });
 
     // validaciones simples
+    if (nombre.value.trim().length >= 3) {
+      nombre.classList.add('is-valid');
+    } else {
+      nombre.classList.add('is-invalid');
+    }
+
+    if (apellidos.value.trim().length >= 3) {
+      apellidos.classList.add('is-valid');
+    } else {
+      apellidos.classList.add('is-invalid');
+    }
+
+
     // Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(correo.value.trim())) {
