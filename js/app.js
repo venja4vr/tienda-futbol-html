@@ -38,7 +38,7 @@ fetch('data/productos.json')
                 ${camiseta.tallas.map(talla => `<span class="badge bg-secondary me-1">${talla}</span>`).join('')}
               </div>
 
-              <a href="#" class="btn btn-primary mt-auto">Añadir al carrito</a>
+              <button class="btn btn-primary mt-auto btn-ver-detalles" data-id="${camiseta.id}">Ver detalles</button>
             </div>
           </div>
         </div>
@@ -46,6 +46,19 @@ fetch('data/productos.json')
       // agregamos la tarjeta al contenedor
       //el += importante para que se rellenen todas las poleras y no solo la ultima
       productosContainer.innerHTML += cardHTML;
+    });
+    // Añadir el evento de click a los botones después de que se han creado
+    document.querySelectorAll('.btn-ver-detalles').forEach(button => {
+        button.addEventListener('click', function(event) {
+            const idProducto = event.target.getAttribute('data-id');
+            const productoSeleccionado = camisetas.find(c => c.id == idProducto);
+            
+            // guardar el producto en el localStorage para la página de detalle
+            localStorage.setItem('productoDetallado', JSON.stringify(productoSeleccionado));
+
+            // redireccionar a la página de detalle
+            window.location.href = 'producto_detallado.html';
+        });
     });
   })
   .catch(error => console.error('Error al cargar las camisetas:', error));
