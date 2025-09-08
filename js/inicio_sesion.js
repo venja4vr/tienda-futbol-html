@@ -17,22 +17,31 @@ document.addEventListener('DOMContentLoaded', function () {
       input.classList.remove('is-valid', 'is-invalid');
     });
 
+        // validaciones
+        let formularioValido = true;
+
     // validaciones simples
     // Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailRegex.test(correo.value.trim())) {
+    const emailIng = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailIng.test(correo.value.trim())) {
       correo.classList.add('is-valid');
     } else {
       correo.classList.add('is-invalid');
     }
 
     // Contraseña: mínimo 8, 1 mayúscula, 1 minúscula
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    if (passRegex.test(pass.value.trim())) {
+    const passIng = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    if (passIng.test(pass.value.trim())) {
       pass.classList.add('is-valid');
     } else {
       pass.classList.add('is-invalid');
     }
+
+        if (formularioValido) {
+            alert('¡Inicio de sesion realizado con exito.');
+            form.reset(); // Limpia los campos
+        }
   });
+
 });
 

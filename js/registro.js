@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
       input.classList.remove('is-valid', 'is-invalid');
     });
 
+        // validaciones
+        let formularioValido = true;
+
     // validaciones simples
     if (nombre.value.trim().length >= 3) {
       nombre.classList.add('is-valid');
@@ -33,22 +36,36 @@ document.addEventListener('DOMContentLoaded', function () {
       apellidos.classList.add('is-invalid');
     }
 
+    // RUT: validar largo mínimo y formato básico
+    const rutIng = /^\d{1,2}.\d{3}.\d{3}-[\dkK]$/;
+    if (rutIng.test(rut.value.trim())) {
+      rut.classList.add('is-valid');
+    } else {
+      rut.classList.add('is-invalid');
+    }
+
 
     // Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailRegex.test(correo.value.trim())) {
+    const emailIng = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailIng.test(correo.value.trim())) {
       correo.classList.add('is-valid');
     } else {
       correo.classList.add('is-invalid');
     }
 
     // Contraseña: mínimo 8, 1 mayúscula, 1 minúscula
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    if (passRegex.test(pass.value.trim())) {
+    const passIng = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    if (passIng.test(pass.value.trim())) {
       pass.classList.add('is-valid');
     } else {
       pass.classList.add('is-invalid');
     }
+
+            if (formularioValido) {
+            alert('¡Registro realizado con exito.');
+            form.reset(); // Limpia los campos
+        }
   });
+
 });
 

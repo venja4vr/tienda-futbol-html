@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // validación del correo: formato de email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailRegex.test(correo.value.trim())) {
+        const emailIng = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailIng.test(correo.value.trim())) {
             correo.classList.add('is-valid');
         } else {
             correo.classList.add('is-invalid');
